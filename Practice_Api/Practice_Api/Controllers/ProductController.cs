@@ -26,7 +26,7 @@ namespace MyWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
             var product = await _productRepository.GetProduct(id);
@@ -38,15 +38,21 @@ namespace MyWebApi.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<Product>> AddProduct(Product product)
         {
+            // ModelState automatically integrates FluentValidation errors
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var addedProduct = await _productRepository.AddProduct(product);
             return CreatedAtAction(nameof(GetProduct), new { id = addedProduct.Id }, addedProduct);
         }
 
         [HttpPut("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> UpdateProduct(int id, Product product)
         {
             if (id != product.Id)
@@ -64,7 +70,7 @@ namespace MyWebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var deleted = await _productRepository.DeleteProduct(id);

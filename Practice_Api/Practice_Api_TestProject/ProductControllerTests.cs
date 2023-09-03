@@ -51,7 +51,7 @@ namespace Practice_Api_TestProject
         public async Task GetProduct_ReturnsProduct_WhenFound()
         {
             // Arrange
-            var productId = 10;
+            var productId = 100;
             var expectedProduct = new Product { Id = productId, Name = "Product 1", Price = 10.0m };
 
             _fixture.DbContext.Products.Add(expectedProduct);
@@ -70,7 +70,7 @@ namespace Practice_Api_TestProject
         public async Task GetProduct_ReturnsNotFound_WhenNotFound()
         {
             // Arrange
-            var productId = 100; // Assuming no product with this ID exists in the database
+            var productId = 101; // Assuming no product with this ID exists in the database
 
             // Act
             var result = await _controller.GetProduct(productId);
@@ -83,7 +83,7 @@ namespace Practice_Api_TestProject
         public async Task DeleteProduct_ReturnsNoContent_WhenValidInput()
         {
             // Arrange
-            var productId = 1;
+            var productId = 100;
 
             // Act
             var result = await _controller.DeleteProduct(productId);

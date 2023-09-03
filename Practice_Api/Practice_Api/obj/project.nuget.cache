@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DscnjD5FkcNoOPM2TV6gB7y42F9e6cfWgM0KOS87xmyiQRerDvw2ji/VJxw1hYtV4QRvXvRpIxBOgp5HL5efHA==",
+  "dgSpecHash": "JdD1v9niAGHIruWizilAf6K8sz6da7BbRuB65Qc2rX10MgnBA+4uscYsCmAQVDNFJUL2q9xVOhfbAMspIN7kZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\senak\\OneDrive\\Desktop\\TestProject\\dotnet_practice\\Practice_Api\\Practice_Api\\Practice_Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\senak\\.nuget\\packages\\fluentvalidation\\11.0.0\\fluentvalidation.11.0.0.nupkg.sha512",
+    "C:\\Users\\senak\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.0\\fluentvalidation.aspnetcore.11.0.0.nupkg.sha512",
+    "C:\\Users\\senak\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.0\\fluentvalidation.dependencyinjectionextensions.11.0.0.nupkg.sha512",
     "C:\\Users\\senak\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.21\\microsoft.aspnetcore.authentication.jwtbearer.6.0.21.nupkg.sha512",
     "C:\\Users\\senak\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\senak\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",

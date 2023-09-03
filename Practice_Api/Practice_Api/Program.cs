@@ -1,8 +1,10 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Practice_Api.Data;
 using Practice_Api.Middleware;
+using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,19 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("InMemoryDb"));
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+// Add services to the container.
+
+//builder.Services.AddControllers()
+//                .AddFluentValidation(options =>
+//                {
+//                    // Validate child properties and root collection elements
+//                    options.ImplicitlyValidateChildProperties = true;
+//                    options.ImplicitlyValidateRootCollectionElements = true;
+
+//                    // Automatic registration of validators in assembly
+//                    options.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+//                });
 
 // jwt authentication
 JwtAuthenticationMiddleware.ConfigureAuthentication(builder.Services);
